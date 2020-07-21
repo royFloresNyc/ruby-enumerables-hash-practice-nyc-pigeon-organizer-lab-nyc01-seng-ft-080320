@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
   #iterate over input hash
   data.each do |attribute, value|
     value.each do |name|
-    
+      if organized_hash.has_key?(name)
     end
   end 
 
