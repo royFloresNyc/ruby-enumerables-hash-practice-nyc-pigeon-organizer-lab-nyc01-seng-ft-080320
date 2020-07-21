@@ -9,6 +9,10 @@ def nyc_pigeon_organizer(data)
   data.each do |attribute, value|
     value.each do |name|
       if organized_hash[name][attribute]
+        organized_hash[name][attribute] << value 
+      else
+        organized_hash[name][attribute] = [value]
+      end
     end
   end 
 
