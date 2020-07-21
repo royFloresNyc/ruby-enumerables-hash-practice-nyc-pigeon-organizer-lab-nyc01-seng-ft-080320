@@ -21,7 +21,7 @@ def nyc_pigeon_organizer(data)
   organized_hash
 end
 
-#helper method
+#helper method (getter)
 def pigeon_name_getter(collection)
   pigeon_names = []
   collection.each do |key, value|
@@ -30,7 +30,7 @@ def pigeon_name_getter(collection)
   pigeon_names
 end
 
-#helper method
+#helper method (setter)
 def pigeon_name_key_setter(array)
   result_hash = {}
   array.each do |name|
