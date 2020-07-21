@@ -1,9 +1,11 @@
 require 'pry'
 
 def nyc_pigeon_organizer(data)
+  #get and set names of pigeons as key in a result hash
   pigeon_names = pigeon_name_getter(data[:lives])
   organized_hash = pigeon_name_key_setter(pigeon_names)
   
+  #iterate over input hash
   binding.pry
   organized_hash
 end
