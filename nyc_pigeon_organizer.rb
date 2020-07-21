@@ -11,7 +11,7 @@ def nyc_pigeon_organizer(data)
       if organized_hash[name][attribute]
         organized_hash[name][attribute] << value 
       else
-        organized_hash[name][attribute] = [value]
+        organized_hash[name][attribute] = [value.to_s]
       end
     end
   end 
