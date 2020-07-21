@@ -9,7 +9,7 @@ end
 def pigeon_name_getter(collection)
   pigeon_names = []
   collection.each do |key, value|
-    value.each { |name| pigeon_names << name }
+    pigeon_names.concat(value)
   end
   pigeon_names
 end
