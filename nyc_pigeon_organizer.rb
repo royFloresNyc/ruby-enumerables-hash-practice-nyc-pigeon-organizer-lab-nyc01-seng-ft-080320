@@ -1,4 +1,5 @@
 require 'pry'
+require 'spec/nyc_pigeon_organizer_spec.rb'
 
 def nyc_pigeon_organizer(data)
   pigeon_names = pigeon_name_getter(data[:lives])
