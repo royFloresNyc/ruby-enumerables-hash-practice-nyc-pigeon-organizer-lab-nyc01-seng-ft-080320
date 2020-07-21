@@ -7,13 +7,15 @@ def nyc_pigeon_organizer(data)
   
   #iterate over input hash
   data.each do |attribute, value|
-    value.each do |name|
-      if organized_hash[name].has_key?(attribute)
-        organized_hash[name][attribute] << value 
-      else
-        organized_hash[name][attribute] = [value.to_s]
+    value.each do |sub_attribute, array_of_names|
+      array_of_names.each do |name|
+        if organized_hash[name].has_key?(attribute)
+          organized_hash[name][attribute] << sub_attribute.to_s
+        else
+          organized_hash[name][attribute] = [sub_attribute.to_s]
+        end
       end
-    end
+    end  
   end 
   
   organized_hash
