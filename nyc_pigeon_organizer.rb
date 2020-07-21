@@ -1,8 +1,10 @@
+require 'pry'
+
 def nyc_pigeon_organizer(data)
-  organized_hash = {}
-  pigeon_name_getter(data[:lives])
+  pigeon_names = pigeon_name_getter(data[:lives])
+  organized_hash = pigeon_name_key_setter(pigeon_names)
   
-  
+  binding.pry
   organized_hash
 end
 
@@ -19,4 +21,5 @@ def pigeon_name_key_setter(array)
   array.each do |name|
     result_hash[name] = {}
   end
+  result_hash
 end
